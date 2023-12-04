@@ -33,6 +33,8 @@ int main()
     int item = 40;
     int len = sizeof(arr)/sizeof(arr[0]);
 
-    int ret = binSearch(arr, len, item);
-    cout << "Element found at: " << ret << endl;
+    int ret = binSearch(arr, len, item);    
+    if (ret != -1) cout << "Item " << item << " found at index: " << ret << endl;
+    else cout << "Item " << item << " not found in the array" << endl;
+
 }
