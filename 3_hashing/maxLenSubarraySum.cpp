@@ -18,8 +18,9 @@ int maxLenSubarraySum(int arr[], int len, int sum)
         }
         if (m.find(pre_sum) == m.end())
         {
-            //m.insert(pre_sum, i);
-            m.insert({ 20, 130 });
+            pair temp<pre_sum, i>;
+            m.insert(temp);
+            //m.insert({ 20, 130 });
         }
         if (m.find(pre_sum-sum) != m.end())
         {

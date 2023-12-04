@@ -1,3 +1,5 @@
+// Program to check if a given array has a sub-array
+// with zero sum
 #include <iostream>
 #include <unordered_set>
 
