@@ -16,12 +16,13 @@ struct Node
 void insertAtPos(Node ** head, int pos, int num)
 {
     Node* curr = *head;
+    Node* temp = new Node(num);
 
     if (pos == 1)
     {
-        Node* temp = new Node(num);
         temp->next = curr;
         *head = temp;
+        return;
     }
     for (int i = 1; i <= pos-2 && curr != NULL; i++)
     {
@@ -31,13 +32,11 @@ void insertAtPos(Node ** head, int pos, int num)
     {
         return; // no changes in the list
     }
-    Node* temp = new Node(num);
     temp->next = curr->next;
     curr->next = temp;
 
     return;
 }
-
 
 void insertAtEnd(Node** head, int num)
 {
