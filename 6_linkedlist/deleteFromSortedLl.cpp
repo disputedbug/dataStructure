@@ -1,3 +1,4 @@
+//Program to remove an element from a sorted LL
 #include <iostream>
 using namespace std;
 
