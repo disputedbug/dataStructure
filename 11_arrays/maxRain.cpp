@@ -1,3 +1,4 @@
+// Maximum amount of rain collected in a set of blocks
 #include <iostream>
 using namespace std;
 
