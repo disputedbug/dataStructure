@@ -32,7 +32,6 @@ bool search(Node* root, int val)
     {
         return search(root->right, val);
     }
-
 }
 
 int main()
