@@ -1,4 +1,4 @@
-// Code to left rotate an array by 1
+// Code to left rotate an array by d
 #include <iostream>
 using namespace std;
 
