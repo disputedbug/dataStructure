@@ -32,12 +32,7 @@ int sqRoot(int num)
 
 int main()
 {
-
     int toFind = 49;
-
     int ret = sqRoot(toFind);
-
     cout << "Square-root of " << toFind << " is: " << ret << endl;
-
-
 }
