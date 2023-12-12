@@ -69,6 +69,4 @@ int main()
     int ret = lastOccur(arr, len, toFind);
 
     cout << "Last occurance of " << toFind << " is: " << ret << endl;
-
-
 }
