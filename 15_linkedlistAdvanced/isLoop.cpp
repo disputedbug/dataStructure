@@ -51,10 +51,10 @@ Node* insertAtEnd(Node* head, int num)
     }
     if (num == 200)
     {
-        temp = midNode;
+        temp->next = midNode;// comment this line to remove the loop
     }
     endNode->next = temp;
-    endNode = temp; // comment this line to remove the loop
+    endNode = temp;
 
     return head;
 }
