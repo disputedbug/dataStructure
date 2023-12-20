@@ -1,23 +1,26 @@
-// Program to find the stock span
+// Program to find the previous greater element in an array
 #include <iostream>
 #include <stack>
 using namespace std;
 
-void stockSpan(int arr[], int n)
+void prevGreat(int arr[], int n)
 {
     stack<int> s;
-    s.push(0);
-    cout << "1 ";
+    s.push(arr[0]);
+    cout << "-1 ";
 
     for (int i = 1; i < n; i++)
     {
-        while (s.empty() != true && arr[s.top()] <= arr[i])
+        while (s.empty() != true && arr[i] >= s.top())
         {
             s.pop();
         }
-        int span = s.empty() ? i+1 : (i-s.top());
-        cout << span << " ";
-        s.push(i);
+        if (s.empty() == true)
+            cout << "-1 ";
+        else
+            cout << s.top() << " ";
+
+        s.push(arr[i]);
     }
 }
 
@@ -30,6 +33,6 @@ int main()
         cout << arr[i] << " ";
     cout << endl;
 
-    stockSpan(arr, len);
+    prevGreat(arr, len);
     cout << endl;
 }
