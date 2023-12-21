@@ -37,13 +37,13 @@ Node* sortedMerge(Node* a, Node* b)
         if (a->item < b->item)
         {
             tail->next = a;
-            tail = a;
+            tail = tail->next;
             a = a->next;
         }
         else
         {
             tail->next = b;
-            tail = b;
+            tail = tail->next;
             b = b->next;
         }
     }
