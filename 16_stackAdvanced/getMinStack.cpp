@@ -13,7 +13,6 @@ class minStack
     minStack()
     {
         cout << "Min-Stack init" << endl;
-
     }
     int getMin()
     {
