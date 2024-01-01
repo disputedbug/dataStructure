@@ -26,11 +26,15 @@ bool isCycle(int V, vector<int>adjList[])
 
     for (int i = 1; i < V; i++)
     {
-        if (dfs(i, -1, adjList, vis) == true)
-            return true;
+        if (vis[i] != 1)
+        {
+            if (dfs(i, -1, adjList, vis) == true)
+                return true;
+        }
     }
     return false;
 }
+
 int main()
 {
     vector <int> adj[10];
