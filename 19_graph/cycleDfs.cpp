@@ -22,7 +22,7 @@ bool dfs(int node, int parent, vector<int>adjList[], int vis[])
 
 bool isCycle(int V, vector<int>adjList[])
 {
-    int vis[V] = {0};
+    int vis[10] = {0};
 
     for (int i = 1; i < V; i++)
     {
