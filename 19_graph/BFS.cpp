@@ -18,7 +18,7 @@ vector <int> bfsGraph(int V, vector <int>adj[])
         bfs.push_back(node);
         cout << node << " ";
 
-        for (auto item : adj[node])
+        for (auto item: adj[node])
         {
             if (vis[item] != 1)
             {
@@ -26,7 +26,6 @@ vector <int> bfsGraph(int V, vector <int>adj[])
                 q.push(item);
             }
         }
-
     }
     return bfs;
 }
