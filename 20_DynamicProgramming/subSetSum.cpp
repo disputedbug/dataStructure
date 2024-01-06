@@ -2,6 +2,22 @@
 #include <iostream>
 using namespace std;
 
+// Recursive approach
+bool subSetSumRec(int arr[], int n, int sum)
+{
+    if (sum == 0)
+        return true;
+
+    if (n == 0)
+        return false;
+
+    if (arr[n-1] <= sum)
+        return subSetSumRec(arr, n-1, sum-arr[n-1])
+                || subSetSumRec(arr, n-1, sum);
+    else
+        return subSetSumRec(arr, n-1, sum);
+}
+
 // Top-down approach
 bool subSetSum(int arr[], int n, int sum)
 {
@@ -35,10 +51,10 @@ int main()
 {
     int arr[] = {2, 3, 7, 8, 10};
 
-    int sum = 11;
+    int sum = 12;
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    bool res = subSetSum(arr, n, sum);
+    bool res = subSetSumRec(arr, n, sum);
 
     cout << boolalpha << "Subset with sum " << sum <<
           " is in the array: " << res << endl;
