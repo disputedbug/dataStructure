@@ -68,6 +68,5 @@ int main()
     memset(t, -1, sizeof(t));
     int ret = lcsIter(a, b, a.length(), b.length());
 
-
     cout << "Length of lcs for " << a << " and " << b << " is: " << ret << endl;
 }
